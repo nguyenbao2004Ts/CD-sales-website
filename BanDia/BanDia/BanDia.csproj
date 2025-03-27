@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{763F6663-3839-404D-8165-1609B8F125C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BanDia</RootNamespace>
+    <AssemblyName>BanDia</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao.Designer.cs">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoDt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCaoDt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaorp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCaorp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatHang.Designer.cs">
+      <DependentUpon>DatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DathangDaTa.cs">
+      <DependentUpon>DathangDaTa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DathangDaTa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DathangDaTa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatHangrp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatHangrp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formBaocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBaocao.Designer.cs">
+      <DependentUpon>formBaocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InHDDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InHDDatHang.Designer.cs">
+      <DependentUpon>InHDDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InPhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InPhieuTra.Designer.cs">
+      <DependentUpon>InPhieuTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTheTv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTheTv.Designer.cs">
+      <DependentUpon>InTheTv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ketnoicsdl.cs" />
+    <Compile Include="ListDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDia.Designer.cs">
+      <DependentUpon>ListDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNCC.Designer.cs">
+      <DependentUpon>ListNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNV.Designer.cs">
+      <DependentUpon>ListNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTV.Designer.cs">
+      <DependentUpon>ListTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuQL.Designer.cs">
+      <DependentUpon>MenuQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuThue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThuerp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuThuerp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PhieuTra.cs">
+      <DependentUpon>PhieuTra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuTra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuTra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuTrarp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuTrarp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDia.Designer.cs">
+      <DependentUpon>QLDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNCC.Designer.cs">
+      <DependentUpon>QLNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV.Designer.cs">
+      <DependentUpon>QLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLThe.Designer.cs">
+      <DependentUpon>QLThe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTV.Designer.cs">
+      <DependentUpon>QLTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheTvDT.cs">
+      <DependentUpon>TheTvDT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TheTvDT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheTvDT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TheTVrp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheTVrp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThueDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThueDia.Designer.cs">
+      <DependentUpon>ThueDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimDia.Designer.cs">
+      <DependentUpon>TimDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimNCC.Designer.cs">
+      <DependentUpon>TimNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimNV.Designer.cs">
+      <DependentUpon>TimNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimTV.Designer.cs">
+      <DependentUpon>TimTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraDia.Designer.cs">
+      <DependentUpon>TraDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TTDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TTDia.Designer.cs">
+      <DependentUpon>TTDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TTNcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TTNcc.Designer.cs">
+      <DependentUpon>TTNcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TTNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TTNhanVien.Designer.cs">
+      <DependentUpon>TTNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TTthanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TTthanhVien.Designer.cs">
+      <DependentUpon>TTthanhVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaoCao.resx">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaorp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCaorp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatHang.resx">
+      <DependentUpon>DatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatHangrp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DatHangrp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBaocao.resx">
+      <DependentUpon>formBaocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InHDDatHang.resx">
+      <DependentUpon>InHDDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InPhieuTra.resx">
+      <DependentUpon>InPhieuTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTheTv.resx">
+      <DependentUpon>InTheTv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDia.resx">
+      <DependentUpon>ListDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNCC.resx">
+      <DependentUpon>ListNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNV.resx">
+      <DependentUpon>ListNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTV.resx">
+      <DependentUpon>ListTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuQL.resx">
+      <DependentUpon>MenuQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuThuerp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PhieuThuerp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuTrarp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PhieuTrarp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QLDia.resx">
+      <DependentUpon>QLDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNCC.resx">
+      <DependentUpon>QLNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNV.resx">
+      <DependentUpon>QLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLThe.resx">
+      <DependentUpon>QLThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTV.resx">
+      <DependentUpon>QLTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheTVrp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TheTVrp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThueDia.resx">
+      <DependentUpon>ThueDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimDia.resx">
+      <DependentUpon>TimDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimNCC.resx">
+      <DependentUpon>TimNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimNV.resx">
+      <DependentUpon>TimNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimTV.resx">
+      <DependentUpon>TimTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraDia.resx">
+      <DependentUpon>TraDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TTDia.resx">
+      <DependentUpon>TTDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TTNcc.resx">
+      <DependentUpon>TTNcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TTNhanVien.resx">
+      <DependentUpon>TTNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TTthanhVien.resx">
+      <DependentUpon>TTthanhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BaoCaoDt.xsc">
+      <DependentUpon>BaoCaoDt.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoDt.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaoCaoDt.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCaoDt.xss">
+      <DependentUpon>BaoCaoDt.xsd</DependentUpon>
+    </None>
+    <None Include="DathangDaTa.xsc">
+      <DependentUpon>DathangDaTa.xsd</DependentUpon>
+    </None>
+    <None Include="DathangDaTa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DathangDaTa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DathangDaTa.xss">
+      <DependentUpon>DathangDaTa.xsd</DependentUpon>
+    </None>
+    <None Include="PhieuThue.xsc">
+      <DependentUpon>PhieuThue.xsd</DependentUpon>
+    </None>
+    <None Include="PhieuThue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhieuThue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PhieuThue.xss">
+      <DependentUpon>PhieuThue.xsd</DependentUpon>
+    </None>
+    <None Include="PhieuTra.xsc">
+      <DependentUpon>PhieuTra.xsd</DependentUpon>
+    </None>
+    <None Include="PhieuTra.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhieuTra.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PhieuTra.xss">
+      <DependentUpon>PhieuTra.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TheTvDT.xsc">
+      <DependentUpon>TheTvDT.xsd</DependentUpon>
+    </None>
+    <None Include="TheTvDT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TheTvDT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TheTvDT.xss">
+      <DependentUpon>TheTvDT.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\41b4f3534da81d3d5cffd8d5ba4aa0bf.jpg" />
+    <Content Include="Images\4205906.ico" />
+    <Content Include="Images\430996147_2392243790960691_7301248806161264471_n.jpg" />
+    <Content Include="Images\535198_1.ico" />
+    <Content Include="Images\654116_1.ico" />
+    <Content Include="Images\8a27a9add235bb50ec6f3212cd751f68.jpg" />
+    <Content Include="Images\954591_1.ico" />
+    <Content Include="Images\images.ico" />
+    <Content Include="Images\images.jpg" />
+    <Content Include="Images\images_1.ico" />
+    <Content Include="Images\pngtree-blue-tech-line-background-promotion-banner-picture-image_1109273.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
